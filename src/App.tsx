@@ -1,14 +1,13 @@
-import { Admin } from 'react-admin';
+import { Admin, Resource } from 'react-admin';
 
-import { dataProvider } from './dataProvider.ts'
-
-import './App.css'
+import posts from './posts';
+import dataProvider from './dataProvider.ts'
 
 function App() {
 
   return (
     <Admin dataProvider={dataProvider}>
-
+      <Resource name="posts" {...posts} />
     </Admin>
   )
 }
